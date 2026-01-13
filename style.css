@@ -7,8 +7,37 @@
 }
 
 body {
-    background-color: #BDE0FE;
+    background-color: #dedede;
     font-family: "Poppins", sans-serif;
+}
+
+
+@media (max-width: 414px) {
+
+    header {
+        padding: 15px;
+    }
+
+  
+
+    main {
+        width: 90%;
+    }
+
+    .first {
+        font-size: 21px;
+    }
+
+    .beneficios{
+        width: 92%;
+    }
+
+    .containerValores {
+        margin-right: 40px;
+        padding: 0px 6px ;
+    }
+    
+
 }
 
 .menu {
@@ -26,7 +55,7 @@ body {
 .name-empresa {
     color: #1F68AC;
     font-family: "Kalnia", serif;
-    margin-left: 12px;
+    margin-left: 40px;
 }
 
 .hamburguer {
@@ -71,6 +100,8 @@ h2 {
     box-shadow: -8px 4px 12px -2px rgba(0, 0, 0, 35%);
 }
 
+/*Beneficios */
+
 .beneficios {
     background-color: #A2C9EA;
     box-shadow: 4px 4px 4px -1px rgba(0, 0, 0, 25%) inset;
@@ -96,12 +127,63 @@ h2 {
     margin: 22px;
 }
 
-/*
+/* Animações descartadas.
+
+.animacaoConfete {
+    animation-name: pular;
+    animation-duration: 1.8s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pular {
+    to {
+        transform: translateY(-20px);
+    }
+  
+}
+
+.animacaoMoto {
+    animation-name: movimentar;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes movimentar {
+    from {
+        transform: translateX(-35px);
+    }
+    
+    to {
+        transform: translateX(25px);
+
+    }
+}
+
+.animacaoCifrao {
+    animation-name: cifrao;
+    animation-duration: 1.9s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cifrao {
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+*/
+
 .imgBaby img {
     width: 90px;
     height: auto;
 }
-*/
+
 
 .imgAnimacao:hover {
     transform: scale(1.2);
@@ -181,7 +263,7 @@ ul {
 }
 
 .verMais {
-    background: linear-gradient(137deg, #BC6AF3 ,#639CD0);
+    background: linear-gradient(137deg, #BC6AF3, #639CD0);
     border: none;
     padding: 10px 36px;
     border-radius: 25px;
@@ -193,4 +275,43 @@ ul {
     transform: scale(1.2);
     transition: 1s;
     box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.342);
+}
+
+/*Carossel*/
+
+.text-second {
+    color: #DA4EB0;
+    text-align: center;
+}
+
+.carrossel-images {
+    overflow: hidden;
+    width: 92%;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    margin-top: 30px;
+}
+
+.carrossel-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 30s linear infinite;
+    gap: 20px;
+}
+
+.carrossel-track img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
