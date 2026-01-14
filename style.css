@@ -11,39 +11,40 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
-
-@media (max-width: 414px) {
-
-    header {
-        padding: 15px;
-    }
-
-  
-
-    main {
-        width: 90%;
-    }
-
-    .first {
-        font-size: 21px;
-    }
-
-    .beneficios{
-        width: 92%;
-    }
-
-    .containerValores {
-        margin-right: 40px;
-        padding: 0px 6px ;
-    }
-    
-
+main {
+    height: 50vh;
+    margin-top: -50px;
+    padding: 60px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./assets/bannerinicio.png);
 }
+
+.contrato {
+    font-weight: 200;
+    font-size: 16px;
+    text-align: center;
+}
+
+.first-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: #EBCFD5;
+    padding: 12px;
+    border-radius: 32px;
+}
+
+/*Header*/
 
 .menu {
     display: flex;
     text-align: center;
     align-items: center;
+    background-color: transparent;
 }
 
 .logo {
@@ -53,15 +54,15 @@ body {
 }
 
 .name-empresa {
-    color: #1F68AC;
+    color: #6fafeb;
     font-family: "Kalnia", serif;
     margin-left: 40px;
 }
 
-.hamburguer {
-    color: black;
-    width: 50%;
-    height: auto;
+.instagram i {
+    color: rgb(216, 209, 209);
+    font-size: 32px;
+    margin-left: 70px;
 }
 
 h2 {
@@ -71,6 +72,10 @@ h2 {
 
 .text {
     color: #DA4EB0;
+}
+
+a {
+    text-decoration: none;
 }
 
 .containerPai {
@@ -91,6 +96,10 @@ h2 {
 }
 
 .contant {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
     color: #857e7e;
     background: linear-gradient(137deg, #bfa8cc, #FFAFCC);
     border: none;
@@ -98,13 +107,33 @@ h2 {
     border-radius: 32px;
     margin-top: 12px;
     box-shadow: -8px 4px 12px -2px rgba(0, 0, 0, 35%);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+button i {
+    font-size: 18px;
+    color: green;
+}
+
+button:hover i {
+    margin-right: 55px;
+    margin-left: -55px;
+}
+
+button p {
+      font-size: 14px;
+}
+
+button:hover p {
+      transform: translateX(-130px);
 }
 
 /*Beneficios */
 
 .beneficios {
-    background-color: #A2C9EA;
-    box-shadow: 4px 4px 4px -1px rgba(0, 0, 0, 25%) inset;
+    background-color: #a2caea9d;
+    box-shadow: 6px 6px 6px .8px rgba(0, 0, 0, 25%) inset;
     padding: 32px 12px;
 }
 
@@ -279,18 +308,24 @@ ul {
 
 /*Carossel*/
 
-.text-second {
-    color: #DA4EB0;
+.title-Photos {
+    color: #151C68;
     text-align: center;
+    margin-bottom: 18px;
+}
+
+.text-second {
+    font-weight: 500;
 }
 
 .carrossel-images {
+    width: 100%;
     overflow: hidden;
-    width: 92%;
     margin: 0;
     padding: 0;
     background-color: white;
     margin-top: 30px;
+    padding-bottom: 30px;
 }
 
 .carrossel-track {
@@ -314,4 +349,37 @@ ul {
     100% {
         transform: translateX(-50%);
     }
+}
+
+/*Responsividade*/
+
+@media (max-width: 414px) {
+
+    header {
+        padding: 15px;
+    }
+
+    main {
+        width: 100%;
+        margin-top: -80px;
+    }
+
+    .first {
+        font-size: 21px;
+    }
+
+    .beneficios{
+        width: 100%;
+    }
+
+    .containerValores {
+        width: 100%;
+
+        padding: 0px 10px ;
+    }
+    
+    .carrossel-images {
+        width: 100%;
+    }
+
 }
